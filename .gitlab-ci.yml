@@ -1,0 +1,50 @@
+stages:
+  - linting
+  - test
+  - deploy
+
+image: python:latest
+
+linting:
+  stage: linting
+  script:
+    - pip install black
+    - black --check .
+
+tests:
+  stage: test
+  script:
+    - pip install -r requirements.txt
+    - python test_and_convert.py
+  artifacts:
+    paths:
+      - website/docs/notebooks
+
+.pages_settings:
+  stage: deploy
+  before_script:
+  - pip install mkdocs mkdocs-material pygments pymdown-extensions nbconvert
+  script:
+  - cd ${CI_PROJECT_DIR}/website
+  - mkdocs build -d $TARGETPATH
+  artifacts:
+    paths:
+    - $TARGETPATH
+
+pages:
+  extends: .pages_settings
+  variables:
+    TARGETPATH: ${CI_PROJECT_DIR}/public
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+      when: on_success
+    - when: never
+
+test:
+  extends: .pages_settings
+  variables:
+    TARGETPATH: ${CI_PROJECT_DIR}/test
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+      when: never
+    - when: on_success

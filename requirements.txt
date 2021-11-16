@@ -1,0 +1,6 @@
+jupyter
+jupytext
+matplotlib
+nbformat
+numpy
+scipy

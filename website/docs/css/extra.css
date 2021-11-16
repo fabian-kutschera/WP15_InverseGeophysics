@@ -1,0 +1,14 @@
+.icon-done:before {
+    content: "\e605"
+}
+
+.md-typeset a {
+    color: #d75f09 !important
+}
+
+article.md-typeset > p > img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    display: block;
+}

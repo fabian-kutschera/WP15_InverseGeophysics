@@ -1,0 +1,58 @@
+site_name: 'Lecture Notes on Inverse Theory'
+site_description: 'Lecture Notes on Inverse Theory'
+
+copyright: 'Copyright (c) 2021. Seismology and Wave Physics, ETH Zurich'
+
+theme:
+    name: 'material'
+    icon:
+        logo: material/library
+    font:
+        text: 'Roboto'
+        code: 'Roboto Mono'
+    palette:
+        primary: 'deep orange'
+        accent: 'indigo'
+
+
+markdown_extensions:
+    - admonition
+    - codehilite
+    - pymdownx.emoji:
+         emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - pymdownx.arithmatex
+    - toc:
+        permalink: true
+
+extra_css: ['css/extra.css']
+
+# Enable MathJax.
+extra_javascript:
+      - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+
+# Page tree
+nav:
+  - Introduction: index.md
+  - Part 0:
+      - Line fitting in 1D: notebooks/Line_fitting_in_1-D.md
+  - Part 1:
+    - Bayes' table: notebooks/Bayes_table.md
+    - Find the fisherman: notebooks/Find_the_fisherman.md
+    - Gauss coefficients: notebooks/Gauss_coefficients.md
+    - Gaussian samples: notebooks/Gaussian_samples.md
+    - MALA: notebooks/MALA.md
+    - Metropolis-Hastings: notebooks/Metropolis-Hastings.md
+    - Metropolis-Hastings Time shift: notebooks/Metropolis-Hastings_time_shift.md
+    - Transdimensional sampling (naive): notebooks/Transdimensional_-_Naive.md
+    - Transdimensional sampling (reversible): notebooks/Transdimensional_-_Reversible_Jump.md
+  - Part 2:
+    - 1D wave equation: notebooks/FD1D_visco-elastic.md
+    - Backus-Gilbert: notebooks/Love_Waves_in_Layered_Media.md
+    - Iterative linearisation: notebooks/Iterative_linearisation.md
+    - Nonlinear optimisation in 2D: notebooks/Nonlinear_optimisation_in_2D.md
+    - Straight-ray tomography: notebooks/Straight-Ray_Tomography.md
+  - Part 4:
+    - Hamiltonian Nullspace Shuttle (random): notebooks/Hamiltonian_Nullspace_Shuttle_-_2D_Analytic_random.md
+    - Hamiltonian Nullspace Shuttle (analytic): notebooks/Hamiltonian_Nullspace_Shuttle_-_2D_Analytic.md
+#   - Part 0X:
+#     - FD2Dpy: notebooks/FD2Dpy.md
