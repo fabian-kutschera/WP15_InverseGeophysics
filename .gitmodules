@@ -1,0 +1,3 @@
+[submodule "Astic-2020-JointInversion"]
+	path = Astic-2020-JointInversion
+	url = https://github.com/simpeg-research/Astic-2020-JointInversion.git
