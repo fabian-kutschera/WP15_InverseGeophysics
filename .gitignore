@@ -3,5 +3,7 @@
 **/__pycache__
 #**/*.pdf
 #**/*.ipynb
+Astic-2020-JointInversion/PGI_joint_inversion/.ipynb_checkpoints/*
+Astic-2020-JointInversion/PGI_joint_inversion/.ipynb_checkpoints
 
 token
