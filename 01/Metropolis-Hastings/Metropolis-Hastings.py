@@ -5,9 +5,9 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.5'
-#       jupytext_version: 1.6.0
+#       jupytext_version: 1.13.2
 #   kernelspec:
-#     display_name: Python 3
+#     display_name: Python 3 (ipykernel)
 #     language: python
 #     name: python3
 # ---
@@ -42,7 +42,6 @@ def p(x, y):
         2.0 * np.pi * s2
     ) + np.exp(-0.5 * ((x - 2.0) ** 2 + y ** 2) / s2 ** 2) / (2.0 * np.pi * s2)
 
-
 # Plot.
 x = np.linspace(-7.0, 7.0, 100)
 y = np.linspace(-7.0, 7.0, 100)
@@ -63,7 +62,7 @@ plt.show()
 
 # +
 # Make'global' or 'local' proposals.
-proposal = "local"
+proposal = "global"
 
 # Proposal radius. Only relevant for local proposals.
 sigma = 1.0
@@ -199,3 +198,6 @@ if True:
     plt.savefig("trajectories.pdf")
     # plt.title('trajectory')
     plt.show()
+# -
+
+
